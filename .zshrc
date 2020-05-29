@@ -16,6 +16,12 @@ colors
 export LSCOLORS='GxfxcxdxbxegedabagGxGx'
 alias ls="ls -G"
 
+# cdを省略する
+# setopt auto_cd
+
+# カレントディレクトリが変更した時に発火するhook関数でcdしたときに自動でlsする
+function chpwd(){ ls }
+
 # プロンプトの形式
 PROMPT='[%n@%m]# '
 RPROMPT='[%d]'
@@ -28,7 +34,9 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias sl=ls
-alias b='cd ..'
+alias b='cd ../..'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
 alias t=touch
 #alias emacs=vim
 
