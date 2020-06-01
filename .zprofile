@@ -15,7 +15,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # gccコマンドでXcodeのgcc(clang)ではなくhomebrewで入れたgccを使う
-alias gcc='gcc-8'
+alias gcc='gcc-9'
 
 #nodeのPATHを追加
 export PATH="$PATH:$HOME/.nodebrew/current/bin"
