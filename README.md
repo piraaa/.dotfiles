@@ -6,5 +6,5 @@ myenv
  ```zsh
 cd ~/
 git clone https://github.com/piraaa/.dotfiles.git
-sh .dotfiles/dotfilesLink.sh
+sh .dotfiles/setup.sh
 ```
