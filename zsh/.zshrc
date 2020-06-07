@@ -34,14 +34,14 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias sl=ls
-alias b='cd ../..'
+alias b='cd ..'
 alias bb='cd ../..'
 alias bbb='cd ../../..'
 alias t=touch
 #alias emacs=vim
 
 # ヒストリー
-HISTFILE=~/.zsh.history
+HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt extended_history #ヒストリーに実行時刻も記録することで閉じたセッションで実行したコマンドもhistoryコマンドで時刻確認できるようにする
