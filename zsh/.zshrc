@@ -17,7 +17,7 @@ export LSCOLORS='GxfxcxdxbxegedabagGxGx'
 alias ls="ls -G"
 
 # cdを省略する
-# setopt auto_cd
+setopt auto_cd
 
 # カレントディレクトリが変更した時に発火するhook関数でcdしたときに自動でlsする
 function chpwd(){ ls }
@@ -39,6 +39,7 @@ alias bb='cd ../..'
 alias bbb='cd ../../..'
 alias t=touch
 #alias emacs=vim
+alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
 # ヒストリー
 HISTFILE=~/.zsh_history
