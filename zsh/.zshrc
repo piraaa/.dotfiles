@@ -30,14 +30,16 @@ RPROMPT='[%d]'
 typeset -U path cdpath fpath manpath
 
 # よく使うコマンドの省略形たち
-alias l='ls'
+alias l=ls
 alias la='ls -a'
 alias ll='ls -l'
 alias sl=ls
-alias b='cd ..'
-alias bb='cd ../..'
-alias bbb='cd ../../..'
+alias ..='cd ..'
+alias rm='rm -i' #削除するか確認する
+alias mv='mv -i' #上書きするか確認する
+alias cp='cp -i' #上書きするか確認する
 alias t=touch
+alias c=clear
 #alias emacs=vim
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
