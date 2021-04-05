@@ -26,3 +26,6 @@ export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 # jenvのPATHを追加
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# MySQLのPATHを追加
+export PATH=$PATH:/usr/local/mysql/bin
