@@ -33,9 +33,13 @@ typeset -U path cdpath fpath manpath
 alias l=ls
 alias la='ls -a'
 alias ll='ls -l'
+alias lla='ls -la'
 alias sl=ls
 alias ..='cd ..'
-alias rm='rm -i' #削除するか確認する
+alias b='cd ..'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
+#alias rm='rm -i' #削除するか確認する
 alias mv='mv -i' #上書きするか確認する
 alias cp='cp -i' #上書きするか確認する
 #alias t=touch
