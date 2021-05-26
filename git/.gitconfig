@@ -1,0 +1,26 @@
+[user]
+	name = pira
+	email = pira.y1121@gmail.com
+
+[core]
+	excludesfile = /Users/pira/.gitignore_global
+#	editor = vim
+
+[init]
+#	defaultBranch = main
+
+[alias]
+	s = status -sb # s=short / b=branch
+	a = add
+	au = add --update #変更があったかつバージョン管理課のファイルをステージング
+	aa = add --all #変更があったすべてのファイルをステージング（新規作成したファイルも含む）
+	c = commit -m
+	b = branch
+	co = checkout
+	sw = switch
+	l = log --oneline --graph --all
+	d = diff
+
+[https]
+	proxy = http://proxy.cc.uec.ac.jp:8080/
+
