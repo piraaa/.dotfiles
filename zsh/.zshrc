@@ -11,8 +11,6 @@ zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # lsコマンドの出力に色をつける
-autoload colors
-colors
 export LSCOLORS='GxfxcxdxbxegedabagGxGx'
 alias ls="ls -G"
 
@@ -23,8 +21,8 @@ setopt auto_cd
 function chpwd(){ ls }
 
 # プロンプトの形式
-PROMPT='[%n@%m]# '
-RPROMPT='[%d]'
+PROMPT='%F{red}%B%n@%m%b%f:%F{green}[%c]%f %# '
+RPROMPT='%F{green}[%d]%f'
 
 # 重複PATHを追加しない
 typeset -U path cdpath fpath manpath
@@ -48,6 +46,9 @@ alias c=clear
 #alias emacs=vim
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
+# SSH接続中に背景色を変える
+alias ssh='sh ~/.dotfiles/lib/ssh-change-bg.sh'
+
 # ヒストリー
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
@@ -60,4 +61,4 @@ setopt share_history #同時に起動したzshの間でヒストリーを共有�
 # オプション
 setopt no_beep #ビープ音なし
 setopt interactive_comments #シャープでコメントアウト
-setopt extended_glob #ファイル名で正規表現(#,~,^)を使う
+#setopt extended_glob #ファイル名で正規表現(#,~,^)を使う #`HEAD^`やIssue番号の`#`などのgitの記号と干渉するためコメントアウト
