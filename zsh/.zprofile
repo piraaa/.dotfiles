@@ -4,6 +4,9 @@
 # .zshrcを読み込む
 source ~/.zshrc
 
+# gccコマンドでXcodeのgcc(clang)ではなくhomebrewで入れたgccを使う
+alias gcc='gcc-11'
+
 # pythonコマンドでsystemデフォルトのpython2ではなくhomebrewから入れたpython3を使う
 # [2019.06.25追記]homebrewから入れたpython3ではなくpyenvのpythonを使うことにしたため削除
 # alias python='python3'
@@ -14,8 +17,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# gccコマンドでXcodeのgcc(clang)ではなくhomebrewで入れたgccを使う
-alias gcc='gcc-11'
+# jenvのPATHを追加
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # nodebrewのPATHを追加
 # [2021.06.28追記]anyenv/nodenvを使用することにしたため削除
@@ -23,10 +27,6 @@ alias gcc='gcc-11'
 
 # anyenv
 eval "$(anyenv init -)"
-
-# jenvのPATHを追加
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 
 # Android adbのPATHを追加
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
