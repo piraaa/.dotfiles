@@ -15,7 +15,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # gccコマンドでXcodeのgcc(clang)ではなくhomebrewで入れたgccを使う
-alias gcc='gcc-10'
+alias gcc='gcc-11'
 
 # nodebrewのPATHを追加
 # (2021.06.28コメントアウト)anyenv/nodenvを使用することにしたので削除
