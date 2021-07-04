@@ -17,10 +17,14 @@ eval "$(pyenv init -)"
 # gccコマンドでXcodeのgcc(clang)ではなくhomebrewで入れたgccを使う
 alias gcc='gcc-10'
 
-#nodeのPATHを追加
-export PATH="$PATH:$HOME/.nodebrew/current/bin"
+# nodebrewのPATHを追加
+# (2021.06.28コメントアウト)anyenv/nodenvを使用することにしたので削除
+# export PATH="$PATH:$HOME/.nodebrew/current/bin"
 
-#Android adbのPATHを追加
+# anyenv
+eval "$(anyenv init -)"
+
+# Android adbのPATHを追加
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 
 # jenvのPATHを追加
