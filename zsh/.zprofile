@@ -2,10 +2,10 @@
 # ログインシェルのログイン時に一度だけ読み込まれる．PATH関係とか！
 
 # .zshrcを読み込む
-# source ~/.zshrc
+source ~/.zshrc
 
 # pythonコマンドでsystemデフォルトのpython2ではなくhomebrewから入れたpython3を使う
-# (2019.06.25コメントアウト)homebrewから入れたpython3ではなくpyenvのpythonを使うことにしたため．
+# [2019.06.25追記]homebrewから入れたpython3ではなくpyenvのpythonを使うことにしたため削除
 # alias python='python3'
 # alias pip='pip3'
 
@@ -18,18 +18,18 @@ eval "$(pyenv init -)"
 alias gcc='gcc-11'
 
 # nodebrewのPATHを追加
-# (2021.06.28コメントアウト)anyenv/nodenvを使用することにしたので削除
+# [2021.06.28追記]anyenv/nodenvを使用することにしたため削除
 # export PATH="$PATH:$HOME/.nodebrew/current/bin"
 
 # anyenv
 eval "$(anyenv init -)"
 
-# Android adbのPATHを追加
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
-
 # jenvのPATHを追加
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# Android adbのPATHを追加
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 
 # MySQLのPATHを追加
 export PATH=$PATH:/usr/local/mysql/bin
