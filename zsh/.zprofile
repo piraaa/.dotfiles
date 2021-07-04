@@ -15,7 +15,7 @@ alias gcc='gcc-11'
 # pyenvの設定
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 # jenvのPATHを追加
 export PATH="$HOME/.jenv/bin:$PATH"
