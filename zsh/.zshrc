@@ -50,6 +50,17 @@ alias c=clear
 #alias emacs=vim
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
+# 基本コマンドのラッパー
+# bat(https://github.com/sharkdp/bat)
+alias bat='bat -p'
+alias cat='bat -pp'
+# exa(https://github.com/ogham/exa)
+#alias ls=exa
+# ripgrep(https://github.com/BurntSushi/ripgrep)
+#alias grep=rg
+# hexyl(https://github.com/sharkdp/hexyl)
+#alias od=hexyl
+
 # SSH接続中に背景色を変える
 alias ssh='sh ~/.dotfiles/lib/ssh-change-bg.sh'
 
