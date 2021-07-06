@@ -20,8 +20,12 @@ setopt auto_cd
 # カレントディレクトリが変更した時に発火するhook関数でcdしたときに自動でlsする
 function chpwd(){ ls }
 
+# git-prompt(ターミナルにGitブランチ名を表示)
+source ~/.dotfiles/.zsh/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+
 # プロンプトの形式
-PROMPT='%F{red}%B%n@%m%b%f:%F{green}[%c]%f %# '
+setopt PROMPT_SUBST ; PS1='[%F{red}%B%n@%m%b%f:%F{green}%c%f]%F{yellow} $(__git_ps1 "(%s)"" ")%f%# '
 RPROMPT='%F{green}[%d]%f'
 
 # 重複PATHを追加しない
