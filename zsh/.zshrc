@@ -10,15 +10,8 @@ zstyle ':completion:*:default' menu select=1
 # 大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# lsコマンドの出力に色をつける
-export LSCOLORS='GxfxcxdxbxegedabagGxGx'
-alias ls="ls -G"
-
-# cdを省略する
-setopt auto_cd
-
-# カレントディレクトリが変更した時に発火するhook関数でcdしたときに自動でlsする
-function chpwd(){ ls }
+# 重複PATHを追加しない
+typeset -U path cdpath fpath manpath
 
 # git-prompt(ターミナルにGitブランチ名を表示)
 source ~/.dotfiles/.zsh/git-prompt.sh
@@ -28,8 +21,15 @@ GIT_PS1_SHOWDIRTYSTATE=true
 setopt PROMPT_SUBST ; PS1='[%F{red}%B%n@%m%b%f:%F{green}%c%f]%F{yellow} $(__git_ps1 "(%s)"" ")%f%# '
 RPROMPT='%F{green}[%d]%f'
 
-# 重複PATHを追加しない
-typeset -U path cdpath fpath manpath
+# cdを省略する
+setopt auto_cd
+
+# カレントディレクトリが変更した時に発火するhook関数でcdしたときに自動でlsする
+function chpwd(){ ls }
+
+# lsコマンドの出力に色をつける
+alias ls="ls -G"
+export LSCOLORS='GxfxcxdxbxegedabagGxGx'
 
 # よく使うコマンドの省略形たち
 alias l=ls
