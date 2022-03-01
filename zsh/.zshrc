@@ -2,7 +2,7 @@
 # ログインシェルとインタラクティブシェルで読み込まれる
 
 # 補完機能を有効にする
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 
 # 補完候補をカーソルキーで選択可能にする
 zstyle ':completion:*:default' menu select=1
@@ -77,3 +77,4 @@ setopt share_history #同時に起動したzshの間でヒストリーを共有�
 setopt no_beep #ビープ音なし
 setopt interactive_comments #シャープでコメントアウト
 #setopt extended_glob #ファイル名で正規表現(#,~,^)を使う #`HEAD^`やIssue番号の`#`などのgitの記号と干渉するためコメントアウト
+
