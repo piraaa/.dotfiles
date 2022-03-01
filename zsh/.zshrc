@@ -65,6 +65,7 @@ alias cat='bat -pp'
 alias ssh='sh ~/.dotfiles/lib/ssh-change-bg.sh'
 
 # ヒストリー
+alias his='history | grep' #引数でhistory+grep
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
