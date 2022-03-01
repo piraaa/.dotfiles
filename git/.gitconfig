@@ -10,7 +10,7 @@
 #	defaultBranch = main
 
 [alias]
-	s = status -sb # s=short / b=branch
+	st = status -sb # s=short / b=branch
 	a = add
 	au = add --update #変更があったかつバージョン管理課のファイルをステージング
 	aa = add --all #変更があったすべてのファイルをステージング（新規作成したファイルも含む）
