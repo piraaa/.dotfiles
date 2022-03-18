@@ -35,5 +35,5 @@ export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH=$PATH:/usr/local/mysql/bin
 
 # k8sの補完機能 (https://kubernetes.io/ja/docs/reference/kubectl/cheatsheet/)
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+source <(kubectl completion zsh)
 
