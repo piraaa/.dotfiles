@@ -18,3 +18,6 @@ ln -sf ~/.dotfiles/homebrew/Brewfile ~/Brewfile
 brew bundle
 brew bundle cleanup
 brew bundle check
+
+# k8s
+git clone https://github.com/superbrothers/zsh-kubectl-prompt.git ~/.dotfiles/.lib/zsh-kubectl-prompt

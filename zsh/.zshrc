@@ -17,9 +17,13 @@ typeset -U path cdpath fpath manpath
 source ~/.dotfiles/.zsh/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 
+# zsh-kubectl-prompt (ターミナルにクラスタ名を表示)
+autoload -U colors; colors
+source ~/.dotfiles/.lib/zsh-kubectl-prompt/kubectl.zsh
+
 # プロンプトの形式
 setopt PROMPT_SUBST ; PS1='[%F{red}%B%n@%m%b%f:%F{green}%c%f]%F{yellow} $(__git_ps1 "(%s)"" ")%f%# '
-RPROMPT='%F{green}[%d]%f'
+RPROMPT='%F{green}[%d]%f %{$fg[blue]%}[$ZSH_KUBECTL_PROMPT]%{$reset_color%}'
 
 # cdを省略する
 setopt auto_cd
@@ -48,6 +52,7 @@ alias cp='cp -i' #上書きするか確認する
 alias t='sh $HOME/.dotfiles/lib/touch_mkdir.sh'
 alias c=clear
 #alias emacs=vim
+alias k=kubectl
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
 # 基本コマンドのラッパー
