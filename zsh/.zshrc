@@ -1,6 +1,9 @@
 # .zshrc
 # ログインシェルとインタラクティブシェルで読み込まれる
 
+# 初期PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
 # 補完機能を有効にする
 autoload -Uz compinit && compinit
 
