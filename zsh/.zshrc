@@ -5,7 +5,11 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # 補完機能を有効にする
-autoload -Uz compinit && compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  autoload -Uz compinit && compinit
+fi
 
 # 補完候補をカーソルキーで選択可能にする
 zstyle ':completion:*:default' menu select=1
