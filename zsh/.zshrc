@@ -57,6 +57,7 @@ alias cp='cp -i' #上書きするか確認する
 alias t='sh $HOME/.dotfiles/lib/touch_mkdir.sh'
 alias c=clear
 #alias emacs=vim
+alias g=git
 alias k=kubectl
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
