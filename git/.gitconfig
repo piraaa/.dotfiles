@@ -17,6 +17,7 @@
 	c = commit -m
 	b = branch
 	co = checkout
+	cp = cherry-pick
 	sw = switch
 	l = log --oneline --graph --all
 	d = diff
