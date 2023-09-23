@@ -59,6 +59,7 @@ alias c=clear
 #alias emacs=vim
 alias g=git
 alias k=kubectl
+alias python=python3
 alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
 # 基本コマンドのラッパー
