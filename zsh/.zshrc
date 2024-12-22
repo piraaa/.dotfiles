@@ -65,7 +65,7 @@ alias 'youtube-dl-mp3'='youtube-dl -x --audio-format mp3 --audio-quality 0'
 # 基本コマンドのラッパー
 # bat(https://github.com/sharkdp/bat)
 alias bat='bat -p'
-alias cat='bat -pp'
+#alias cat='bat -pp'
 # exa(https://github.com/ogham/exa)
 #alias ls=exa
 # ripgrep(https://github.com/BurntSushi/ripgrep)
