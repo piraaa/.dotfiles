@@ -2,12 +2,11 @@
 # ログインシェルとインタラクティブシェルで読み込まれる
 
 # 初期PATH
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+# export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # 補完機能を有効にする
 autoload -Uz compinit && compinit
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  
 
 # 補完候補をカーソルキーで選択可能にする
 zstyle ':completion:*:default' menu select=1
