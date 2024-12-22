@@ -1,8 +1,9 @@
 # .zprofile
 # ログインシェルのログイン時に一度だけ読み込まれる．PATH関係とか！
 
-# homebrew # .zshrc 内で brew コマンドを使用するため .zshrc より先に実行
+# homebrew # .zshrc 内で brew コマンドを使用するため .zshrc より先に実行 (for OSX and Linux)
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # .zshrcを読み込む
 source ~/.zshrc
