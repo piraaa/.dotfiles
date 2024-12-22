@@ -25,3 +25,8 @@
 [https]
 	proxy = http://proxy.cc.uec.ac.jp:8080/
 
+[push]
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
